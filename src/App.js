@@ -1,4 +1,5 @@
 import React from "react";
+import Article from "./Components/Article/Article";
 
 const App = () => {
   const [articles, setArticles] = React.useState([]);
@@ -15,7 +16,7 @@ const App = () => {
     <div>
       <h1>Total Article: {articles?.length}</h1>
       {articles.map((article, index) => (
-        <key key={index + 1} Article article={article} />
+        <Article article={article} key={index + 1} />
       ))}
     </div>
   );
