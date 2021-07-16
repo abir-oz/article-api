@@ -9,12 +9,12 @@ const App = () => {
   React.useEffect(() => {
     fetch(url)
       .then((response) => response.json())
-      .then((json) => setArticles(json.articles));
+      .then((data) => setArticles(data?.articles));
   }, []);
 
   return (
     <div>
-      <h1>Total Article: {articles.length}</h1>
+      <h1>Total Article: {articles?.length}</h1>
       {articles.map((article, index) => (
         <Article article={article} />
       ))}

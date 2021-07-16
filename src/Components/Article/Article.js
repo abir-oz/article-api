@@ -1,10 +1,11 @@
 import React from "react";
 
 const Article = ({ article }) => {
+  const { title, description } = article;
   return (
     <div>
-      <h1>{article.title}</h1>
-      <p>{article.description}</p>
+      <h1>{title}</h1>
+      <p>{description}</p>
     </div>
   );
 };
